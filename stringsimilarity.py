@@ -20,10 +20,7 @@ def narrow(question,possibles):
 		poss = nltk.pos_tag(poss)
 		tree = nltk.ne_chunk(poss)
 		for child in tree:
-			# if len(child) == 1:
-			# 	print child.label()
 			if pers == True:
-				# print child
 				if len(child) == 1 and (child.label() == "PERSON" or child.label() == "GPE"):
 					result.append(poss)
 					break
